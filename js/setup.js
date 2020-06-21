@@ -52,9 +52,18 @@
     }
   });
 
-  window.colorize.colorize(wizardCoat, window.colorize.WIZARD_COAT_COLOR, coatInput);
-  window.colorize.colorize(wizardEyes, window.colorize.WIZARD_EYES_COLOR, eyesInput);
-  window.colorize.colorize(fireball, window.colorize.FIREBALL_COLOR, fireballInput);
+
+  wizardCoat.addEventListener('click', function (evt) {
+    coatInput.value = evt.target.style.fill = window.utils.getRandomElement(window.colorize.WIZARD_COAT_COLOR);
+  });
+
+  wizardEyes.addEventListener('click', function (evt) {
+    eyesInput.value = evt.target.style.fill = window.utils.getRandomElement(window.colorize.WIZARD_EYES_COLOR);
+  });
+
+  fireball.addEventListener('click', function (evt) {
+    fireballInput.value = evt.target.style.backgroundColor = window.utils.getRandomElement(window.colorize.FIREBALL_COLOR);
+  });
 
   window.validation();
 

@@ -9,21 +9,7 @@
     '#e6e848'
   ];
 
-  var getRandomColor = function (arrName) {
-    return arrName[Math.floor(Math.random() * arrName.length)];
-  };
-
   window.colorize = {
-    colorize: function (element, colors, elementValue) {
-      element.addEventListener('click', function () {
-        var color = getRandomColor(colors);
-        if (element.tagName.toLowerCase() === 'div') {
-          elementValue.value = element.style.backgroundColor = color;
-        } else {
-          elementValue.value = element.style.fill = color;
-        }
-      });
-    },
     WIZARD_COAT_COLOR: WIZARD_COAT_COLOR,
     WIZARD_EYES_COLOR: WIZARD_EYES_COLOR,
     FIREBALL_COLOR: FIREBALL_COLOR

@@ -17,9 +17,9 @@
     .querySelector('.setup-similar-item');
 
   var CreateWizard = function (wizardNames, wizardSurnames, coatColor, eyesColor) {
-    this.name = wizardNames[Math.floor(Math.random() * wizardNames.length)] + ' ' + wizardSurnames[Math.floor(Math.random() * wizardSurnames.length)];
-    this.coatColor = coatColor[Math.floor(Math.random() * coatColor.length)];
-    this.eyesColor = eyesColor[Math.floor(Math.random() * eyesColor.length)];
+    this.name = window.utils.getRandomElement(wizardNames) + ' ' + window.utils.getRandomElement(wizardSurnames);
+    this.coatColor = window.utils.getRandomElement(coatColor);
+    this.eyesColor = window.utils.getRandomElement(eyesColor);
   };
 
   var wizards = [];

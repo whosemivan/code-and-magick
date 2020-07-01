@@ -1,4 +1,5 @@
 'use strict';
+
 (function () {
   var Cloud = {
     WIDTH: 420,
